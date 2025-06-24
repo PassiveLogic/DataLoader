@@ -16,10 +16,7 @@ let package = Package(
 
         // TODO: SM: Revert before merging. Temporarily using PL nio to test fix for NIOCore.
         // .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
-        .package(
-            url: "https://github.com/PassiveLogic/swift-nio.git",
-            branch: "fix/fix-niocore-build-for-wasip1"
-        ),
+        .package(url: "https://github.com/PassiveLogic/swift-nio.git", branch: "main"),
     ],
     targets: [
         .target(
