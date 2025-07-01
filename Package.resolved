@@ -1,5 +1,5 @@
 {
-  "originHash" : "34f315fb9047f350b535493d2e79e60dfd40675b4bfc9f7a8e4b8d79bb3dd6c5",
+  "originHash" : "671190872e7e319188436edb3e00383d21928f95979b1cffe820d2df5688e5d2",
   "pins" : [
     {
       "identity" : "async-collections",
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/PassiveLogic/swift-nio.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "8d2347a56b812083fe547e584de023f2668fe6fe"
+        "branch" : "feat/swift-wasm-support",
+        "revision" : "fa674390331c7ca39af12c231e8de8f8389f1966"
       }
     },
     {
