@@ -55,7 +55,14 @@ public actor DataLoader<Key: Hashable & Sendable, Value: Sendable> {
                 // This task must be detached in order to fulfill potential other keys
                 // even if the originally triggering key is cancelled.
                 Task.detached {
+                    #if hasFeature(Embedded)
+                    // Task.sleep is unavailable in Embedded Swift; execute the batch
+                    // immediately (the execution-period coalescing window is skipped —
+                    // documented behaviorally-lossy embedded no-op, khasm embedded port).
+                    _ = executionPeriod
+                    #else
                     try await Task.sleep(nanoseconds: executionPeriod)
+                    #endif
                     try await self.execute()
                 }
 
